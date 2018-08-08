@@ -15,11 +15,11 @@ namespace EZUSB
             //Set("Win32_PnPEntity");
         }
         private int iCameraCount = 0;
-        public void AddWatcher()
+        public string AddWatcher()
         {
             //是要在USB变动之前判断已经有多少个摄像头
-
-            ezUSB.AddUSBEventWatcher(USBEventHandler, USBEventHandler, new TimeSpan(0, 0, 2));
+            string strResult = ezUSB.AddUSBEventWatcher(USBEventHandler, USBEventHandler, new TimeSpan(0, 0, 2));
+            return strResult;
         }
 
         public delegate void CameraInsert(string cameraName);

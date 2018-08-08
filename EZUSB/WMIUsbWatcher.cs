@@ -22,6 +22,7 @@ QQ：36748897
 using System;
 using System.Management;
 using System.Text;
+using EZUSB;
 using static EZUSB.MyUsbWatcherAboutCameraOper;
 
 namespace Splash.IO.PORTS
@@ -63,7 +64,7 @@ namespace Splash.IO.PORTS
         /// <param name="usbInsertHandler">USB插入事件处理器</param>
         /// <param name="usbRemoveHandler">USB拔出事件处理器</param>
         /// <param name="withinInterval">发送通知允许的滞后时间</param>
-        public Boolean AddUSBEventWatcher(EventArrivedEventHandler usbInsertHandler, EventArrivedEventHandler usbRemoveHandler, TimeSpan withinInterval)
+        public string AddUSBEventWatcher(EventArrivedEventHandler usbInsertHandler, EventArrivedEventHandler usbRemoveHandler, TimeSpan withinInterval)
         {
             try
             {
@@ -94,13 +95,13 @@ namespace Splash.IO.PORTS
                     removeWatcher.Start();
                 }
 
-                return true;
+                return "_ok";
             }
 
             catch (Exception ex)
             {
                 RemoveUSBEventWatcher();
-                return false;
+                return ex.Message.ToString();
             }
         }
 
