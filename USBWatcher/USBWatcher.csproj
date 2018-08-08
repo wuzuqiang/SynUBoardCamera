@@ -100,7 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EZUSB\EZUSB.csproj">
-      <Project>{EC5728D8-256F-45A7-BCEE-174745B27C8A}</Project>
+      <Project>{ec5728d8-256f-45a7-bcee-174745b27c8a}</Project>
       <Name>EZUSB</Name>
     </ProjectReference>
   </ItemGroup>

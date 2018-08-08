@@ -11,3 +11,16 @@ E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\USBWatcher\obj\x86
 E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\USBWatcher\obj\x86\Debug\USBWatcher.csproj.CopyComplete
 E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\USBWatcher\obj\x86\Debug\USBWatcher.exe
 E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\USBWatcher\obj\x86\Debug\USBWatcher.pdb
+E:\WU\SynUBoardCamera\USBWatcher\obj\x86\Debug\USBWatcher.csprojAssemblyReference.cache
+E:\WU\SynUBoardCamera\USBWatcher\obj\x86\Debug\Splash.Form1.resources
+E:\WU\SynUBoardCamera\USBWatcher\obj\x86\Debug\Splash.Form2.resources
+E:\WU\SynUBoardCamera\USBWatcher\obj\x86\Debug\USBWatcher.Properties.Resources.resources
+E:\WU\SynUBoardCamera\USBWatcher\obj\x86\Debug\USBWatcher.csproj.GenerateResource.cache
+E:\WU\SynUBoardCamera\USBWatcher\obj\x86\Debug\USBWatcher.csproj.CoreCompileInputs.cache
+E:\WU\SynUBoardCamera\USBWatcher\obj\x86\Debug\USBWatcher.exe
+E:\WU\SynUBoardCamera\USBWatcher\obj\x86\Debug\USBWatcher.pdb
+E:\WU\SynUBoardCamera\USBWatcher\bin\Debug\USBWatcher.exe
+E:\WU\SynUBoardCamera\USBWatcher\bin\Debug\USBWatcher.pdb
+E:\WU\SynUBoardCamera\USBWatcher\bin\Debug\EZUSB.dll
+E:\WU\SynUBoardCamera\USBWatcher\bin\Debug\EZUSB.pdb
+E:\WU\SynUBoardCamera\USBWatcher\obj\x86\Debug\USBWatcher.csproj.CopyComplete
