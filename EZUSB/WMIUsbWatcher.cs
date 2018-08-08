@@ -74,7 +74,7 @@ namespace Splash.IO.PORTS
                 {   
                     WqlEventQuery InsertQuery = new WqlEventQuery("__InstanceCreationEvent",
                         withinInterval,
-                        "TargetInstance isa 'Win32_USBControllerDevice'");
+                        "TargetInstance isa 'Win32_PnPEntity where PnPClass='Camera''");
 
                     insertWatcher = new ManagementEventWatcher(Scope, InsertQuery);
                     insertWatcher.EventArrived += usbInsertHandler;
@@ -86,7 +86,7 @@ namespace Splash.IO.PORTS
                 {   
                     WqlEventQuery RemoveQuery = new WqlEventQuery("__InstanceDeletionEvent",
                         withinInterval,
-                        "TargetInstance isa 'Win32_USBControllerDevice'");
+                        "TargetInstance isa 'Win32_PnPEntity where PnPClass='Camera''");
 
                     removeWatcher = new ManagementEventWatcher(Scope, RemoveQuery);
                     removeWatcher.EventArrived += usbRemoveHandler;
@@ -129,7 +129,7 @@ namespace Splash.IO.PORTS
         public static USBControllerDevice[] WhoUSBControllerDevice(EventArrivedEventArgs e)
         {
             ManagementBaseObject mbo = e.NewEvent["TargetInstance"] as ManagementBaseObject;
-            if (mbo != null && mbo.ClassPath.ClassName == "Win32_USBControllerDevice")
+            if (mbo != null && mbo.ClassPath.ClassName == "Win32_PnPEntity where PnPClass='Camera'")
             {
                 try
                 {
