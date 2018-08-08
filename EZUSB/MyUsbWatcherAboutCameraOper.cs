@@ -22,20 +22,29 @@ namespace EZUSB
             ezUSB.AddUSBEventWatcher(USBEventHandler, USBEventHandler, new TimeSpan(0, 0, 2));
         }
 
-        public delegate void CameraInsert();
+        public delegate void CameraInsert(string cameraName);
         public event CameraInsert eventCameraInsert;
+        public delegate void CameraRemove(string cameraName);
+        public event CameraRemove eventCameraRemove;
         private void USBEventHandler(Object sender, EventArrivedEventArgs e)
         {
+            ExtPnPEntityInfo[] pnPEntityInfos = USB.WhoUSBControllerDevice(e);
             if (e.NewEvent.ClassPath.ClassName == "__InstanceCreationEvent")
             {
                 //USB插入
                 //usb插入后判断摄像头是否插入的是摄像头
-                USBChanged(e);
+                if (pnPEntityInfos != null)
+                {   //表示得到了摄像头
+                    eventCameraInsert(pnPEntityInfos[0].Name);
+                }
             }
             else if (e.NewEvent.ClassPath.ClassName == "__InstanceDeletionEvent")
             {   //USB拔出
                 //如果是摄像头的拔出
-                USBChanged(e);
+                if (pnPEntityInfos != null)
+                {   //表示得到了摄像头
+                    eventCameraRemove(pnPEntityInfos[0].Name);
+                }
             }
         }
         public void USBChanged(EventArrivedEventArgs e)

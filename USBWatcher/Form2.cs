@@ -18,6 +18,20 @@ namespace Splash
         private void Form2_Load(object sender, EventArgs e)
         {
             watcher.AddWatcher();
+            watcher.eventCameraInsert += Watcher_eventCameraInsert1;
+            watcher.eventCameraRemove += Watcher_eventCameraRemove;
+        }
+
+        private void Watcher_eventCameraRemove(string cameraName)
+        {
+            SetText(DateTime.Now + "：");
+            SetText("移除摄像头：" + cameraName);
+        }
+
+        private void Watcher_eventCameraInsert1(string cameraName)
+        {
+            SetText(DateTime.Now + "：");
+            SetText("插入摄像头：" + cameraName);
         }
 
         private void Watcher_eventCameraInsert(DsDevice[] VideoInputDevices)
@@ -48,6 +62,7 @@ namespace Splash
         // 对 Windows 窗体控件进行线程安全调用
         private void SetText(String text)
         {
+            text = text + "\n";
             if (this.textBox1.InvokeRequired)
             {
                 this.textBox1.BeginInvoke(new Action<String>((msg) =>
