@@ -1,0 +1,16 @@
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\EZUSB\bin\Debug\EZUSB.dll
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\EZUSB\bin\Debug\EZUSB.pdb
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\EZUSB\obj\Debug\EZUSB.csprojAssemblyReference.cache
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\EZUSB\obj\Debug\EZUSB.csproj.CoreCompileInputs.cache
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\EZUSB\obj\Debug\EZUSB.dll
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\EZUSB\obj\Debug\EZUSB.pdb
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\EZUSB\bin\Debug\DirectShowLib-2005.dll
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\EZUSB\obj\Debug\EZUSB.csproj.CopyComplete
+E:\WU\USBManager\USBManager\EZUSB\bin\Debug\EZUSB.dll
+E:\WU\USBManager\USBManager\EZUSB\bin\Debug\EZUSB.pdb
+E:\WU\USBManager\USBManager\EZUSB\bin\Debug\DirectShowLib-2005.dll
+E:\WU\USBManager\USBManager\EZUSB\obj\Debug\EZUSB.csprojAssemblyReference.cache
+E:\WU\USBManager\USBManager\EZUSB\obj\Debug\EZUSB.csproj.CoreCompileInputs.cache
+E:\WU\USBManager\USBManager\EZUSB\obj\Debug\EZUSB.csproj.CopyComplete
+E:\WU\USBManager\USBManager\EZUSB\obj\Debug\EZUSB.dll
+E:\WU\USBManager\USBManager\EZUSB\obj\Debug\EZUSB.pdb

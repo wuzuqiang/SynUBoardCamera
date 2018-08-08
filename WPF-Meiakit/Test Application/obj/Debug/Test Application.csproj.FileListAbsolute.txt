@@ -1,0 +1,21 @@
+E:\WU\WPF-MediaKit\Test Application\bin\Debug\EVRPresenter32.dll
+E:\WU\WPF-MediaKit\Test Application\bin\Debug\Test Application.exe.config
+E:\WU\WPF-MediaKit\Test Application\bin\Debug\Test Application.exe
+E:\WU\WPF-MediaKit\Test Application\bin\Debug\Test Application.pdb
+E:\WU\WPF-MediaKit\Test Application\bin\Debug\WPFMediaKit.dll
+E:\WU\WPF-MediaKit\Test Application\bin\Debug\WPFMediaKit.pdb
+E:\WU\WPF-MediaKit\Test Application\obj\Debug\Test Application.csprojAssemblyReference.cache
+E:\WU\WPF-MediaKit\Test Application\obj\Debug\MainWindow.g.cs
+E:\WU\WPF-MediaKit\Test Application\obj\Debug\App.g.cs
+E:\WU\WPF-MediaKit\Test Application\obj\Debug\Test Application_Content.g.cs
+E:\WU\WPF-MediaKit\Test Application\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\WU\WPF-MediaKit\Test Application\obj\Debug\Test Application_MarkupCompile.cache
+E:\WU\WPF-MediaKit\Test Application\obj\Debug\Test Application_MarkupCompile.lref
+E:\WU\WPF-MediaKit\Test Application\obj\Debug\MainWindow.baml
+E:\WU\WPF-MediaKit\Test Application\obj\Debug\Test Application.g.resources
+E:\WU\WPF-MediaKit\Test Application\obj\Debug\Test_Application.Properties.Resources.resources
+E:\WU\WPF-MediaKit\Test Application\obj\Debug\Test Application.csproj.GenerateResource.cache
+E:\WU\WPF-MediaKit\Test Application\obj\Debug\Test Application.csproj.CoreCompileInputs.cache
+E:\WU\WPF-MediaKit\Test Application\obj\Debug\Test Application.csproj.CopyComplete
+E:\WU\WPF-MediaKit\Test Application\obj\Debug\Test Application.exe
+E:\WU\WPF-MediaKit\Test Application\obj\Debug\Test Application.pdb

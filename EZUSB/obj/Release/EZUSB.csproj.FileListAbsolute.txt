@@ -1,0 +1,6 @@
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\EZUSB\bin\Release\EZUSB.dll
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\EZUSB\bin\Release\EZUSB.pdb
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\EZUSB\obj\Release\EZUSB.csproj.CoreCompileInputs.cache
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\EZUSB\obj\Release\EZUSB.dll
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\EZUSB\obj\Release\EZUSB.pdb
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\EZUSB\obj\Release\EZUSB.csprojAssemblyReference.cache

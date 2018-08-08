@@ -1,0 +1,16 @@
+E:\WU\WPF-MediaKit\Source\bin\Debug\WPFMediaKit.dll
+E:\WU\WPF-MediaKit\Source\bin\Debug\WPFMediaKit.pdb
+E:\WU\WPF-MediaKit\Source\bin\Debug\DirectShowLib-2005.dll
+E:\WU\WPF-MediaKit\Source\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\WU\WPF-MediaKit\Source\obj\Debug\WPFMediaKit_MarkupCompile.cache
+E:\WU\WPF-MediaKit\Source\obj\Debug\WPFMediaKit_MarkupCompile.lref
+E:\WU\WPF-MediaKit\Source\obj\Debug\Themes\Generic.baml
+E:\WU\WPF-MediaKit\Source\obj\Debug\Themes\MediaDetectorGeneric.baml
+E:\WU\WPF-MediaKit\Source\obj\Debug\WPFMediaKit.g.resources
+E:\WU\WPF-MediaKit\Source\obj\Debug\WPFMediaKit.Properties.Resources.resources
+E:\WU\WPF-MediaKit\Source\obj\Debug\WPF MediaKit.csproj.GenerateResource.cache
+E:\WU\WPF-MediaKit\Source\obj\Debug\WPF MediaKit.csproj.CoreCompileInputs.cache
+E:\WU\WPF-MediaKit\Source\obj\Debug\WPF MediaKit.csproj.CopyComplete
+E:\WU\WPF-MediaKit\Source\obj\Debug\WPFMediaKit.dll
+E:\WU\WPF-MediaKit\Source\obj\Debug\WPFMediaKit.pdb
+E:\WU\WPF-MediaKit\Source\obj\Debug\WPF MediaKit.csprojAssemblyReference.cache

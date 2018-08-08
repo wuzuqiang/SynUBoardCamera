@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZUSB", "EZUSB\EZUSB.csproj", "{EC5728D8-256F-45A7-BCEE-174745B27C8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USBWatcher", "USBWatcher\USBWatcher.csproj", "{367A4070-8365-42A0-B8F1-81F366BF195E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFUsbView", "WPFUsbView\WPFUsbView.csproj", "{6D9D801E-C1CF-4198-92E0-7DA9538B8F74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF-Mediakit", "WPF-Mediakit", "{866D639E-A5B4-4B0B-BF80-49B43A6ACF28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF MediaKit", "WPF-Meiakit\Source\WPF MediaKit.csproj", "{73154957-3D91-48DA-8068-D425B523ED93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test Application", "WPF-Meiakit\Test Application\Test Application.csproj", "{77DD70C4-DE32-4A31-AE22-675F5758FB5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "USBManager", "USBManager", "{F857EB41-1B14-44F0-B8B2-77EF6FC8F6F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC5728D8-256F-45A7-BCEE-174745B27C8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC5728D8-256F-45A7-BCEE-174745B27C8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC5728D8-256F-45A7-BCEE-174745B27C8A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EC5728D8-256F-45A7-BCEE-174745B27C8A}.Debug|x86.Build.0 = Debug|Any CPU
+		{EC5728D8-256F-45A7-BCEE-174745B27C8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC5728D8-256F-45A7-BCEE-174745B27C8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC5728D8-256F-45A7-BCEE-174745B27C8A}.Release|x86.ActiveCfg = Release|Any CPU
+		{EC5728D8-256F-45A7-BCEE-174745B27C8A}.Release|x86.Build.0 = Release|Any CPU
+		{367A4070-8365-42A0-B8F1-81F366BF195E}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{367A4070-8365-42A0-B8F1-81F366BF195E}.Debug|x86.ActiveCfg = Debug|x86
+		{367A4070-8365-42A0-B8F1-81F366BF195E}.Debug|x86.Build.0 = Debug|x86
+		{367A4070-8365-42A0-B8F1-81F366BF195E}.Release|Any CPU.ActiveCfg = Release|x86
+		{367A4070-8365-42A0-B8F1-81F366BF195E}.Release|x86.ActiveCfg = Release|x86
+		{367A4070-8365-42A0-B8F1-81F366BF195E}.Release|x86.Build.0 = Release|x86
+		{6D9D801E-C1CF-4198-92E0-7DA9538B8F74}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{6D9D801E-C1CF-4198-92E0-7DA9538B8F74}.Debug|x86.ActiveCfg = Debug|x86
+		{6D9D801E-C1CF-4198-92E0-7DA9538B8F74}.Debug|x86.Build.0 = Debug|x86
+		{6D9D801E-C1CF-4198-92E0-7DA9538B8F74}.Release|Any CPU.ActiveCfg = Release|x86
+		{6D9D801E-C1CF-4198-92E0-7DA9538B8F74}.Release|x86.ActiveCfg = Release|x86
+		{6D9D801E-C1CF-4198-92E0-7DA9538B8F74}.Release|x86.Build.0 = Release|x86
+		{73154957-3D91-48DA-8068-D425B523ED93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73154957-3D91-48DA-8068-D425B523ED93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73154957-3D91-48DA-8068-D425B523ED93}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{73154957-3D91-48DA-8068-D425B523ED93}.Debug|x86.Build.0 = Debug|Any CPU
+		{73154957-3D91-48DA-8068-D425B523ED93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73154957-3D91-48DA-8068-D425B523ED93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73154957-3D91-48DA-8068-D425B523ED93}.Release|x86.ActiveCfg = Release|Any CPU
+		{73154957-3D91-48DA-8068-D425B523ED93}.Release|x86.Build.0 = Release|Any CPU
+		{77DD70C4-DE32-4A31-AE22-675F5758FB5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77DD70C4-DE32-4A31-AE22-675F5758FB5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77DD70C4-DE32-4A31-AE22-675F5758FB5F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{77DD70C4-DE32-4A31-AE22-675F5758FB5F}.Debug|x86.Build.0 = Debug|Any CPU
+		{77DD70C4-DE32-4A31-AE22-675F5758FB5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77DD70C4-DE32-4A31-AE22-675F5758FB5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77DD70C4-DE32-4A31-AE22-675F5758FB5F}.Release|x86.ActiveCfg = Release|Any CPU
+		{77DD70C4-DE32-4A31-AE22-675F5758FB5F}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EC5728D8-256F-45A7-BCEE-174745B27C8A} = {F857EB41-1B14-44F0-B8B2-77EF6FC8F6F2}
+		{367A4070-8365-42A0-B8F1-81F366BF195E} = {F857EB41-1B14-44F0-B8B2-77EF6FC8F6F2}
+		{6D9D801E-C1CF-4198-92E0-7DA9538B8F74} = {F857EB41-1B14-44F0-B8B2-77EF6FC8F6F2}
+		{73154957-3D91-48DA-8068-D425B523ED93} = {866D639E-A5B4-4B0B-BF80-49B43A6ACF28}
+		{77DD70C4-DE32-4A31-AE22-675F5758FB5F} = {866D639E-A5B4-4B0B-BF80-49B43A6ACF28}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CEE7D68-5AA4-4F2C-BB3F-0FA237B4F4BD}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,13 @@
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\USBWatcher\bin\Release\USBWatcher.exe
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\USBWatcher\bin\Release\USBWatcher.pdb
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\USBWatcher\bin\Release\EZUSB.dll
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\USBWatcher\bin\Release\EZUSB.pdb
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\USBWatcher\obj\x86\Release\USBWatcher.csprojAssemblyReference.cache
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\USBWatcher\obj\x86\Release\Splash.Form1.resources
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\USBWatcher\obj\x86\Release\USBWatcher.Properties.Resources.resources
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\USBWatcher\obj\x86\Release\USBWatcher.csproj.GenerateResource.cache
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\USBWatcher\obj\x86\Release\USBWatcher.csproj.CoreCompileInputs.cache
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\USBWatcher\obj\x86\Release\USBWatcher.csproj.CopyComplete
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\USBWatcher\obj\x86\Release\USBWatcher.exe
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\USBWatcher\obj\x86\Release\USBWatcher.pdb
+E:\WU\Analysis\USBDriver\skydrive-2012-02-22\WPFUsbView\EZUSB\USBWatcher\obj\x86\Release\Splash.Form2.resources
