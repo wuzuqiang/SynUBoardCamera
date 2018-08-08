@@ -41,10 +41,10 @@ namespace EZUSB
         public void USBChanged(EventArrivedEventArgs e)
         {
             //PnPEntityInfo Element = GetCameraEntity(e.NewEvent as ManagementObject);
-            USB.WhoUSBControllerDevice(e);
+            ExtPnPEntityInfo[] pnPEntityInfos = USB.WhoUSBControllerDevice(e);
             //ManagementObject mbo = e.NewEvent["TargetInstance"] as ManagementObject;    //will get the mbo value:null
             //PnPEntityInfo Element = GetCameraEntity(mbo);
-            GetManagementBaseObjectProperties(e.NewEvent);
+            //GetManagementBaseObjectProperties(e.NewEvent);
         }
 
         public void DelWatcher()
@@ -54,6 +54,22 @@ namespace EZUSB
         ~MyUsbWatcherAboutCameraOper()
         {
             DelWatcher();
+        }
+        /// <summary>
+        /// 扩展的即插即用设备信息结构
+        /// </summary>
+        public struct ExtPnPEntityInfo
+        {
+            public String PNPDeviceID;      // 设备ID
+            public String Name;             // 设备名称
+            public String Description;      // 设备描述
+            public String Service;          // 服务
+            public String Status;           // 设备状态
+            public UInt16 VendorID;         // 供应商标识
+            public UInt16 ProductID;        // 产品编号 
+            public Guid ClassGuid;          // 设备安装类GUID
+            public String PnPClass; //PNPClass 属性包含此即插即用设备的类型名称
+            public String[] CompatibleID;   //设备的兼容 ID 列表
         }
         /// <summary>
         /// 即插即用设备信息结构

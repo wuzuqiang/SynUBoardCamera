@@ -14,11 +14,10 @@ E:\WU\USBManager\USBManager\EZUSB\obj\Debug\EZUSB.csproj.CoreCompileInputs.cache
 E:\WU\USBManager\USBManager\EZUSB\obj\Debug\EZUSB.csproj.CopyComplete
 E:\WU\USBManager\USBManager\EZUSB\obj\Debug\EZUSB.dll
 E:\WU\USBManager\USBManager\EZUSB\obj\Debug\EZUSB.pdb
+E:\WU\SynUBoardCamera\EZUSB\obj\Debug\EZUSB.csproj.CoreCompileInputs.cache
 E:\WU\SynUBoardCamera\EZUSB\bin\Debug\EZUSB.dll
 E:\WU\SynUBoardCamera\EZUSB\bin\Debug\EZUSB.pdb
 E:\WU\SynUBoardCamera\EZUSB\bin\Debug\DirectShowLib-2005.dll
-E:\WU\SynUBoardCamera\EZUSB\obj\Debug\EZUSB.csproj.CoreCompileInputs.cache
 E:\WU\SynUBoardCamera\EZUSB\obj\Debug\EZUSB.csproj.CopyComplete
 E:\WU\SynUBoardCamera\EZUSB\obj\Debug\EZUSB.dll
 E:\WU\SynUBoardCamera\EZUSB\obj\Debug\EZUSB.pdb
-E:\WU\SynUBoardCamera\EZUSB\obj\Debug\EZUSB.csprojAssemblyReference.cache

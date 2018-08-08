@@ -71,7 +71,7 @@ namespace Splash
                 this.SetText("USB拔出时间：" + DateTime.Now + "\r\n");
             }
 
-            foreach (USBControllerDevice Device in USB.WhoUSBControllerDevice(e))
+            foreach (USBControllerDevice Device in USB.WhoUSBControllerDevice1(e))
             {
                 this.SetText("\tAntecedent：" + Device.Antecedent + "\r\n");
                 this.SetText("\tDependent：" + Device.Dependent + "\r\n");

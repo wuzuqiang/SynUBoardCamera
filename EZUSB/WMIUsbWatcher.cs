@@ -22,6 +22,7 @@ QQ：36748897
 using System;
 using System.Management;
 using System.Text;
+using static EZUSB.MyUsbWatcherAboutCameraOper;
 
 namespace Splash.IO.PORTS
 {
@@ -74,7 +75,7 @@ namespace Splash.IO.PORTS
                 {   
                     WqlEventQuery InsertQuery = new WqlEventQuery("__InstanceCreationEvent",
                         withinInterval,
-                        "TargetInstance isa 'Win32_PnPEntity where PnPClass=\'Camera\''");
+                        "TargetInstance isa 'Win32_PnPEntity'");
 
                     insertWatcher = new ManagementEventWatcher(Scope, InsertQuery);
                     insertWatcher.EventArrived += usbInsertHandler;
@@ -86,7 +87,7 @@ namespace Splash.IO.PORTS
                 {   
                     WqlEventQuery RemoveQuery = new WqlEventQuery("__InstanceDeletionEvent",
                         withinInterval,
-                        "TargetInstance isa 'Win32_PnPEntity where PnPClass=\'Camera\''");
+                        "TargetInstance isa 'Win32_PnPEntity'");
 
                     removeWatcher = new ManagementEventWatcher(Scope, RemoveQuery);
                     removeWatcher.EventArrived += usbRemoveHandler;
@@ -126,19 +127,22 @@ namespace Splash.IO.PORTS
         /// </summary>
         /// <param name="e">USB插拔事件参数</param>
         /// <returns>发生插拔现象的USB控制设备ID</returns>
-        public static USBControllerDevice[] WhoUSBControllerDevice(EventArrivedEventArgs e)
+        public static USBControllerDevice[] WhoUSBControllerDevice1(EventArrivedEventArgs e)
         {
             ManagementBaseObject mbo = e.NewEvent["TargetInstance"] as ManagementBaseObject;
-            if (mbo != null && mbo.ClassPath.ClassName == "Win32_PnPEntity where PnPClass=\'Camera\'")
+            if (mbo != null && mbo.ClassPath.ClassName == "Win32_PnPEntity")
             {
                 try
                 {
+                    #region 获取所有mbo.Properties
                     StringBuilder sb = new StringBuilder(); 
                     foreach (PropertyData pd in mbo.Properties)
                     {
                         sb.AppendLine(pd.Name + " " + pd.Value);
                     }
-                    string a = mbo["IpEnabled"].ToString();
+                    //string a = mbo["IpEnabled"].ToString();
+                    string strA = sb.ToString();
+                    #endregion
                 }
                 catch(Exception ex)
                 {
@@ -146,6 +150,42 @@ namespace Splash.IO.PORTS
                 String Antecedent = (mbo["Antecedent"] as String).Replace("\"", String.Empty).Split(new Char[] { '=' })[1];
                 String Dependent = (mbo["Dependent"] as String).Replace("\"", String.Empty).Split(new Char[] { '=' })[1];
                 return new USBControllerDevice[1] { new USBControllerDevice { Antecedent = Antecedent, Dependent = Dependent } };
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// 定位发生插拔的PnPEntity设备
+        /// </summary>
+        /// <param name="e">插拔事件参数</param>
+        /// <returns>发生插拔现象的Camera设备</returns>
+        public static ExtPnPEntityInfo[] WhoUSBControllerDevice(EventArrivedEventArgs e)
+        {
+            ManagementBaseObject Entity = e.NewEvent["TargetInstance"] as ManagementBaseObject;
+            if (Entity != null && Entity.ClassPath.ClassName == "Win32_PnPEntity")
+            {
+                try
+                {
+                }
+                catch (Exception ex)
+                {
+                }
+                string pnpClass = Entity["PnPClass"] as String;
+                if (pnpClass != "Camera")
+                    return null;
+                Guid theClassGuid = new Guid(Entity["ClassGuid"] as String);    // 设备安装类GUID
+                ExtPnPEntityInfo Element;
+                Element.PNPDeviceID = Entity["PNPDeviceID"] as String;  // 设备ID
+                Element.Name = Entity["Name"] as String;                // 设备名称
+                Element.Description = Entity["Description"] as String;  // 设备描述
+                Element.Service = Entity["Service"] as String;          // 服务
+                Element.Status = Entity["Status"] as String;            // 设备状态
+                Element.VendorID = 23;     // 供应商标识
+                Element.ProductID = 23;   // 产品编号
+                Element.ClassGuid = theClassGuid;   // 设备安装类GUID
+                Element.CompatibleID = Entity["CompatibleID"] as String[];
+                Element.PnPClass = pnpClass;
+                return new ExtPnPEntityInfo[1] { Element};
             }
             return null;
         }
