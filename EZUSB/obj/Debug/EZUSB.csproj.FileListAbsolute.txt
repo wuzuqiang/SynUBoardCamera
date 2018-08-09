@@ -21,3 +21,4 @@ E:\WU\SynUBoardCamera\EZUSB\bin\Debug\DirectShowLib-2005.dll
 E:\WU\SynUBoardCamera\EZUSB\obj\Debug\EZUSB.csproj.CopyComplete
 E:\WU\SynUBoardCamera\EZUSB\obj\Debug\EZUSB.dll
 E:\WU\SynUBoardCamera\EZUSB\obj\Debug\EZUSB.pdb
+E:\WU\SynUBoardCamera\EZUSB\obj\Debug\EZUSB.csprojAssemblyReference.cache

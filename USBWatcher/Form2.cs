@@ -17,12 +17,9 @@ namespace Splash
         MyUsbWatcherAboutCameraOper watcher = new MyUsbWatcherAboutCameraOper();
         private void Form2_Load(object sender, EventArgs e)
         {
-            //FileHelper.WriteText("fdsfdsfdssfd"); 
-            //if ()
-            {
-                MessageBox.Show(watcher.AddWatcher());
-                SetText(DateTime.Now + "：监控失败！");
-            }
+            //SetText(DateTime.Now + "：Test is can Success??");
+            string strResult = watcher.AddWatcher();
+            //MessageBox.Show(strResult);
             watcher.eventCameraInsert += Watcher_eventCameraInsert1;
             watcher.eventCameraRemove += Watcher_eventCameraRemove;
         }

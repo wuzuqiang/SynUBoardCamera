@@ -1,0 +1,194 @@
+﻿/* ----------------------------------------------------------
+文件名称：WMIUsbWatcher.cs
+
+作者：秦建辉
+
+MSN：splashcn@msn.com
+QQ：36748897
+
+博客：http://blog.csdn.net/jhqin
+
+开发环境：
+    Visual Studio V2010
+    .NET Framework 4 Client Profile
+
+版本历史：
+    V1.1    2011年08月19日
+            增加对插拔USB设备的定位
+ 
+    V1.0	2011年08月18日
+			基于WMI实现对插拔USB设备的监视
+------------------------------------------------------------ */
+using System;
+using System.Management;
+using System.Text;
+using EZUSB;
+using static EZUSB.MyUsbWatcherAboutCameraOper;
+
+namespace Splash.IO.PORTS
+{
+    /// <summary>
+    /// USB控制设备类型
+    /// </summary>
+    public struct USBControllerDevice
+    {
+        /// <summary>
+        /// USB控制器设备ID
+        /// </summary>
+        public String Antecedent;
+
+        /// <summary>
+        /// USB即插即用设备ID
+        /// </summary>
+        public String Dependent;
+    }
+
+    /// <summary>
+    /// 监视USB插拔
+    /// </summary>
+    public partial class USB
+    {        
+        /// <summary>
+        /// USB插入事件监视
+        /// </summary>
+        private ManagementEventWatcher insertWatcher = null;
+
+        /// <summary>
+        /// USB拔出事件监视
+        /// </summary>
+        private ManagementEventWatcher removeWatcher = null;
+
+        /// <summary>
+        /// 添加USB事件监视器
+        /// </summary>
+        /// <param name="usbInsertHandler">USB插入事件处理器</param>
+        /// <param name="usbRemoveHandler">USB拔出事件处理器</param>
+        /// <param name="withinInterval">发送通知允许的滞后时间</param>
+        public string AddUSBEventWatcher(EventArrivedEventHandler usbInsertHandler, EventArrivedEventHandler usbRemoveHandler, TimeSpan withinInterval)
+        {
+            try
+            {
+                ManagementScope Scope = new ManagementScope("root\\CIMV2");
+                Scope.Options.EnablePrivileges = true;
+
+                // USB插入监视
+                if (usbInsertHandler != null)
+                {   
+                    WqlEventQuery InsertQuery = new WqlEventQuery("__InstanceCreationEvent",
+                        withinInterval,
+                        "TargetInstance isa 'Win32_PnPEntity'");
+
+                    insertWatcher = new ManagementEventWatcher(Scope, InsertQuery);
+                    insertWatcher.EventArrived += usbInsertHandler;
+                    insertWatcher.Start();
+                }
+
+                // USB拔出监视
+                if (usbRemoveHandler != null)
+                {   
+                    WqlEventQuery RemoveQuery = new WqlEventQuery("__InstanceDeletionEvent",
+                        withinInterval,
+                        "TargetInstance isa 'Win32_PnPEntity'");
+
+                    removeWatcher = new ManagementEventWatcher(Scope, RemoveQuery);
+                    removeWatcher.EventArrived += usbRemoveHandler;
+                    removeWatcher.Start();
+                }
+
+                return "_ok";
+            }
+
+            catch (Exception ex)
+            {
+                RemoveUSBEventWatcher();
+                return ex.Message.ToString();
+            }
+        }
+
+        /// <summary>
+        /// 移去USB事件监视器
+        /// </summary>
+        public void RemoveUSBEventWatcher()
+        {
+            if (insertWatcher != null)
+            {
+                insertWatcher.Stop();
+                insertWatcher = null;
+            }
+
+            if (removeWatcher != null)
+            {
+                removeWatcher.Stop();
+                removeWatcher = null;
+            }
+        }        
+
+        /// <summary>
+        /// 定位发生插拔的USB设备
+        /// </summary>
+        /// <param name="e">USB插拔事件参数</param>
+        /// <returns>发生插拔现象的USB控制设备ID</returns>
+        public static USBControllerDevice[] WhoUSBControllerDevice1(EventArrivedEventArgs e)
+        {
+            ManagementBaseObject mbo = e.NewEvent["TargetInstance"] as ManagementBaseObject;
+            if (mbo != null && mbo.ClassPath.ClassName == "Win32_PnPEntity")
+            {
+                try
+                {
+                    #region 获取所有mbo.Properties
+                    StringBuilder sb = new StringBuilder(); 
+                    foreach (PropertyData pd in mbo.Properties)
+                    {
+                        sb.AppendLine(pd.Name + " " + pd.Value);
+                    }
+                    //string a = mbo["IpEnabled"].ToString();
+                    string strA = sb.ToString();
+                    #endregion
+                }
+                catch(Exception ex)
+                {
+                }
+                String Antecedent = (mbo["Antecedent"] as String).Replace("\"", String.Empty).Split(new Char[] { '=' })[1];
+                String Dependent = (mbo["Dependent"] as String).Replace("\"", String.Empty).Split(new Char[] { '=' })[1];
+                return new USBControllerDevice[1] { new USBControllerDevice { Antecedent = Antecedent, Dependent = Dependent } };
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// 定位发生插拔的PnPEntity设备
+        /// </summary>
+        /// <param name="e">插拔事件参数</param>
+        /// <returns>发生插拔现象的Camera设备</returns>
+        public static ExtPnPEntityInfo[] WhoUSBControllerDevice(EventArrivedEventArgs e)
+        {
+            ManagementBaseObject Entity = e.NewEvent["TargetInstance"] as ManagementBaseObject;
+            if (Entity != null && Entity.ClassPath.ClassName == "Win32_PnPEntity")
+            {
+                try
+                {
+                }
+                catch (Exception ex)
+                {
+                }
+                string pnpClass = Entity["PnPClass"] as String;
+                if (pnpClass != "Camera" && pnpClass != "Image")
+                    return null;
+                Guid theClassGuid = new Guid(Entity["ClassGuid"] as String);    // 设备安装类GUID
+                ExtPnPEntityInfo Element;
+                Element.PNPDeviceID = Entity["PNPDeviceID"] as String;  // 设备ID
+                Element.Name = Entity["Name"] as String;                // 设备名称
+                Element.Description = Entity["Description"] as String;  // 设备描述
+                Element.Service = Entity["Service"] as String;          // 服务
+                Element.Status = Entity["Status"] as String;            // 设备状态
+                Element.VendorID = 23;     // 供应商标识
+                Element.ProductID = 23;   // 产品编号
+                Element.ClassGuid = theClassGuid;   // 设备安装类GUID
+                Element.CompatibleID = Entity["CompatibleID"] as String[];
+                Element.PnPClass = pnpClass;
+                return new ExtPnPEntityInfo[1] { Element};
+            }
+            return null;
+        }
+    }
+}
